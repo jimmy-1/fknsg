@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7f1ff; /* 修改为浅蓝色背景 */
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px; /* 最大宽度，防止过宽 */
+    margin: 0 auto; /* 居中但允许扩展 */
+}
+
+h1 {
+    font-size: 2.5rem; /* 标题更大、更醒目 */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.blessings {
+    margin-top: 20px;
+}
+
+.blessing-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white; /* 每条祝福语有浅白背景 */
+    border-radius: 8px; /* 圆角更柔和 */
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+}
+
+.blessing-text {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 1rem;
+    color: #444;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* 添加过渡效果 */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.copy-all-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 0;
+    width: 200px;
+    display: block; /* 块级元素，居中 */
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s; /* 添加过渡效果 */
+}
+
+.copy-all-btn:hover {
+    background-color: #1976D2;
+}
+
+/* 响应式设计：小屏幕（手机） */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .blessing-item {
+        flex-direction: column; /* 手机上堆叠显示 */
+        text-align: center;
+    }
+
+    .blessing-text {
+        margin-bottom: 10px; /* 文本和按钮间距 */
+        margin-right: 0;
+    }
+
+    button {
+        width: 100%; /* 按钮占满宽度 */
+        margin-top: 5px;
+    }
+
+    .copy-all-btn {
+        width: 80%; /* 按钮宽度适配 */
+        font-size: 1rem;
+    }
+}
+
+/* 横屏适配：大屏幕 */
+@media screen and (min-width: 1024px) {
+    .blessing-item {
+        padding: 12px 20px; /* 更大的内边距 */
+    }
+
+    .blessing-text {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
